@@ -31,7 +31,7 @@ reddit
 
 
 ### $ ./hostbuster.sh links.txt whitelist.txt
-*replaces /etc/hosts with a new, 37MB one*
+*replaces /etc/hosts with newly processed one*
 
 ##### $ ls -l /etc/hosts
 -rw-r--r-- 1 root root 37134357 Mar 24 23:10 /etc/hosts
