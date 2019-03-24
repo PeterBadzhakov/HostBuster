@@ -1,5 +1,5 @@
 # HostBuster
-Batch installs, whitelists, and sanitizes domains for your Linux hosts file.
+Easily batch installs, whitelists, and sanitizes domains for your Linux hosts file.
 
 ## Usage:
 ### Required:
