@@ -44,6 +44,7 @@ reddit
 
 - Websites usually have a corresponding CDN domain working along. You may want to whitelist those as well, as with the given example for **facebook** and **fbcdn**. You can try browser addons such as **uMatrix** to research websites before you apply the blocks system-wide with the hosts file.
 - Recommended sources:
+
 https://github.com/StevenBlack/hosts
 
 https://github.com/AdroitAdorKhan/Energized
