@@ -8,8 +8,8 @@
 # whitelist domains (may be substrings).
 if [ -z "$1" ] || [ -n "$3" ]; then
 	echo "Invalid arguments."
-	echo "Usage: $1 <path to URLs file>"
-	echo "Optional: $1 <path to URLs file> <path to whitelist file>"
+	echo "Usage: $0 <path to URLs file>"
+	echo "Optional: $0 <path to URLs file> <path to whitelist file>"
 	exit 1
 fi
 
