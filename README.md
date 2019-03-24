@@ -9,7 +9,7 @@ Text file containing newline-separated whitelist domains (may be substrings).
 
 ## Example:
 
-### $ cat links.txt
+##### $ cat links.txt
 https://raw.githubusercontent.com/EnergizedProtection/block/master/unified/formats/hosts.txt
 
 https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/regional/formats/hosts.txt
@@ -19,7 +19,7 @@ https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/xt
 https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts
 
 
-### $ cat whitelist.txt
+##### $ cat whitelist.txt
 facebook
 
 fbcdn
@@ -33,7 +33,7 @@ reddit
 ### $ ./hostbuster.sh links.txt whitelist.txt
 *replaces /etc/hosts with a new, 37MB one*
 
-### $ ls -l /etc/hosts
+##### $ ls -l /etc/hosts
 -rw-r--r-- 1 root root 37134357 Mar 24 23:10 /etc/hosts
 
 ## Notes:
