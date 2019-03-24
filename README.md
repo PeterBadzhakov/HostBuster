@@ -1,5 +1,5 @@
 # HostBuster
-Easily batch installs, whitelists, and sanitizes domains for your Linux hosts file. One-script hosts file manager
+Easily batch installs, whitelists, and sanitizes domains for your Linux hosts file. One-script hosts file manager.
 
 ## Usage:
 ### Required:
