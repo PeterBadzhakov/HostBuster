@@ -43,37 +43,9 @@ reddit
 
 
 - Websites usually have a corresponding CDN domain working along. You may want to whitelist those as well, as with the given example for **facebook** and **fbcdn**. You can try browser addons such as **uMatrix** to research websites before you apply the blocks system-wide with the hosts file.
-- Maximum blockage (my setup):
-https://raw.githubusercontent.com/EnergizedProtection/block/master/unified/formats/hosts.txt
+- Recommended sources:
+https://github.com/StevenBlack/hosts
 
-https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/regional/formats/hosts.txt
+https://github.com/AdroitAdorKhan/Energized
 
-https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/xtreme/formats/hosts.txt
-
-https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts
-
-https://hosts-file.net/ad_servers.txt
-
-https://hosts-file.net/emd.txt
-
-https://hosts-file.net/exp.txt
-
-https://hosts-file.net/fsa.txt
-
-https://hosts-file.net/grm.txt
-
-https://hosts-file.net/hfs.txt
-
-https://hosts-file.net/hjk.txt
-
-https://hosts-file.net/mmt.txt
-
-https://hosts-file.net/pha.txt
-
-https://hosts-file.net/psh.txt
-
-https://hosts-file.net/pup.txt
-
-https://hosts-file.net/wrz.txt
-
-https://hosts-file.net/hphosts-partial.txt
+https://hosts-file.net/?s=Download
