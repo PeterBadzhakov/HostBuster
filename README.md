@@ -3,7 +3,7 @@ Batch installs, whitelists, and sanitizes domains for your Linux hosts file.
 
 ## Usage:
 ### Required:
-Text file containing newline-separated URLs to raw text host files.
+Text file containing newline-separated URLs to raw-text host files.
 ### Optional:
 Text file containing newline-separated whitelist domains (may be substrings).
 
