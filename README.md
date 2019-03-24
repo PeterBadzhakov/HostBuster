@@ -36,6 +36,7 @@ twitter
 reddit
 
 ## Notes:
+- Please leave feedback, this is **work in progress**!
 - Using hosts file bigger than several dozen megabytes **may** make your system **unstable**. In such a case, simply restart your system and write:
 ##### $ sudo rm /etc/hosts
 
