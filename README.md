@@ -6,6 +6,8 @@ Easily batch installs, whitelists, and sanitizes domains for your Linux hosts fi
 Text file containing newline-separated URLs to raw-text host files.
 ### Optional:
 Text file containing newline-separated whitelist domains (may be substrings).
+## Dependencies:
+wget, sort, grep. (Included in Ubuntu 18.10 at time of editing)
 
 ## Example:
 
