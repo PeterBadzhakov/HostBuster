@@ -9,6 +9,13 @@ Text file containing newline-separated whitelist domains (may be substrings).
 
 ## Example:
 
+### $ ./hostbuster.sh links.txt whitelist.txt
+- or
+### $ ./hostbuster.sh links.txt
+*replaces /etc/hosts with newly processed one*
+
+
+
 ##### $ cat links.txt
 https://raw.githubusercontent.com/EnergizedProtection/block/master/unified/formats/hosts.txt
 
@@ -28,14 +35,10 @@ twitter
 
 reddit
 
-
-
-### $ ./hostbuster.sh links.txt whitelist.txt
-*replaces /etc/hosts with newly processed one*
-
-##### $ ls -l /etc/hosts
--rw-r--r-- 1 root root 37134357 Mar 24 23:10 /etc/hosts
-
 ## Notes:
-Using hosts file bigger than several dozen megabytes **may** make your system **unstable**. In such a case, simply restart your system and write:
-### $ sudo rm /etc/hosts
+- Using hosts file bigger than several dozen megabytes **may** make your system **unstable**. In such a case, simply restart your system and write:
+##### $ sudo rm /etc/hosts
+
+
+
+- Websites usually have a corresponding CDN domain working along. You may want to whitelist those as well, as with the given example for **facebook** and **fbcdn**. You can try browser addons such as **uMatrix** to research websites before you apply the blocks system-wide with the hosts file.
