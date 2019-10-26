@@ -6,63 +6,56 @@
 # Optional:
 # Path to text file containing newline-separated
 # whitelist domains (may be substrings).
-if [ -z "$1" ] || [ -n "$3" ]; then
-	echo "Invalid arguments."
-	echo "Usage: $0 <path to URLs file>"
-	echo "Optional: $0 <path to URLs file> <path to whitelist file>"
-	exit 1
+
+if (( $# == 0 )) || (( $# >= 3 )); then
+	echo "Invalid arguments.";
+	echo "Usage: $0 <path to URLs file>";
+	echo "Optional: $0 <path to URLs file> <path to whitelist file>";
+	
+	exit 1;
 fi
 
-cd "$(dirname "$0")"
-source_file="$1"
-whitelist_file="$2"
+source_file="$1";
+whitelist_file="$2";
 
 # Append raw contents of each source URL
 # into current compilation.
-echo "=== Downloading lists. ===\n"
+echo "=== Downloading lists. ===";
 
-while read -r line; do
-	wget "$line" -O raw.new
-	cat raw.new >> raw.curr
-	rm raw.new
-done < "$source_file"
+rm -f ./raw.curr;
+touch ./raw.curr;
+for line in $(cat "$source_file"); do
+	wget "$line" -O ->> ./raw.curr;
+done
 # Left: raw.curr
 
 # Remove duplicate domains.
-echo "=== Removing duplicates. ===\n"
+echo "=== Removing duplicates. ==="
 
-sort -u raw.curr > raw.nodupes
-rm raw.curr
+sort -u ./raw.curr > ./raw.curr.sorted;
+uniq ./raw.curr.sorted >./raw.nodupes;
+
+rm ./raw.curr;
+rm ./raw.curr.sorted;
 
 # Apply whitelist (if necessary).
-if [ -n "$whitelist_file" ]; then
-	echo "=== Applying whitelist. ===\n"
+if [ "$whitelist_file" != "" ]; then
+	echo "=== Applying whitelist. ===";
 
-	regex="("
-	while read -r line; do
-		regex="${regex}|${line}"
-	done < "$whitelist_file"
-	regex="${regex})"
-	grep -vwE "$regex" raw.nodupes > hosts
-	rm raw.nodupes
+	regex="(";
+	for line in $(cat "$whitelist_file"); do
+		regex="$regex$line|";
+	done
+	regex="${regex::-1})";
+	grep -vP "$regex" ./raw.nodupes 2>/dev/null 1>./hosts;
+	rm ./raw.nodupes;
  else
-	mv raw.nodupes hosts
+	mv ./raw.nodupes ./hosts;
 fi
 
-# Overwrite system hosts file.
-echo "=== Replacing system hosts file. ===\n"
+echo "=== Replacing system hosts file. ===";
 
-sudo cp hosts /etc/
-# Left: hosts
+sudo mv ./hosts /etc/;
+rm ./hosts;
 
-# Final cleanup.
-echo "=== Cleaning up. ===\n"
-rm hosts
-
-
-# Make changes take effect.
-echo "=== Restarting network-manager service. ===\n"
-
-sudo service network-manager restart
-
-echo "=== All done. ===\n"
+echo "=== All done. ===";
