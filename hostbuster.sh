@@ -56,6 +56,5 @@ fi
 echo "=== Replacing system hosts file. ===";
 
 sudo mv ./hosts /etc/;
-rm ./hosts;
 
 echo "=== All done. ===";
