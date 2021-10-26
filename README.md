@@ -19,14 +19,13 @@ wget, sort, grep. (Included in Ubuntu 18.10 at time of editing)
 
 
 ##### $ cat links.txt
-https://raw.githubusercontent.com/EnergizedProtection/block/master/unified/formats/hosts.txt
+https://block.energized.pro/unified/formats/hosts
 
-https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/regional/formats/hosts.txt
+https://block.energized.pro/extensions/regional/formats/hosts
 
-https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/xtreme/formats/hosts.txt
+https://block.energized.pro/extensions/xtreme/formats/hosts
 
 https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts
-
 
 ##### $ cat whitelist.txt
 facebook
@@ -36,6 +35,8 @@ fbcdn
 twitter
 
 reddit
+
+linkedin
 
 ## Notes:
 - Please leave feedback, this is **work in progress**!
